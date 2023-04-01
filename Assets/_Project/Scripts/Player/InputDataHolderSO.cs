@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,8 @@ using UnityEngine;
 //[CreateAssetMenu()] Commented because usually you only need one of this SO's
 public class InputDataHolderSO : ScriptableObject
 {
+    public event EventHandler OnPlayerShoot;
+
     public float rotation = 0f;
     public bool isImpulsing = false;
 
@@ -23,6 +26,11 @@ public class InputDataHolderSO : ScriptableObject
     {
         this.rotation = rotation;
         this.isImpulsing = isImpulsing;
+    }
+
+    public void PerformShoot()
+    {
+        OnPlayerShoot?.Invoke(this, EventArgs.Empty);
     }
 
 }

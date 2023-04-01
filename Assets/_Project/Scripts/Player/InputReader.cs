@@ -21,7 +21,15 @@ public class InputReader : MonoBehaviour
 
         gameControl.Player.Impulse.performed += PlayerImpulse_performed;
         gameControl.Player.Impulse.canceled += PlayerImpulse_canceled;
+
+        gameControl.Player.Shoot.performed += Shoot_performed;
+        
         gameControl.Enable();
+    }
+
+    private void Shoot_performed(InputAction.CallbackContext context)
+    {
+        inputDataHolderSO.PerformShoot();
     }
 
     private void PlayerImpulse_performed(InputAction.CallbackContext context)
