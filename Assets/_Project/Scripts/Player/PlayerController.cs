@@ -5,8 +5,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
+    private InputDataHolderSO inputDataHolderSO;
+    [SerializeField]
     private float moveForceMultiplier = 5f;
-    private Rigidbody2D rigidbody2D;
+    private new Rigidbody2D rigidbody2D;
 
     // Start is called before the first frame update
     void Awake()
@@ -14,19 +16,13 @@ public class PlayerController : MonoBehaviour
         rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
 
     private void FixedUpdate()
     {
-        float horizontalInput = Input.GetAxisRaw("Horizontal");
-
         float rotationCap = 5f;
-        rigidbody2D.SetRotation(rigidbody2D.rotation - horizontalInput * rotationCap);
+        rigidbody2D.SetRotation(rigidbody2D.rotation - inputDataHolderSO.rotation * rotationCap);
 
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (inputDataHolderSO.isImpulsing)
         {
             rigidbody2D.AddForce(transform.up * moveForceMultiplier);
         }
