@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     private float moveForceMultiplier = 5f;
     private new Rigidbody2D rigidbody2D;
 
+    [SerializeField]
+    private ScreenBounds screenBounds;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -25,6 +28,7 @@ public class PlayerController : MonoBehaviour
         if (inputDataHolderSO.isImpulsing)
         {
             rigidbody2D.AddForce(transform.up * moveForceMultiplier);
+            
         }
     }
 }
