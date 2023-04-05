@@ -31,4 +31,13 @@ public class BulletBehaviour : MonoBehaviour
         rigidbody2D.velocity = transform.up * bulletSpeed;
 
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.TryGetComponent<IShootable>(out IShootable current))
+        {
+            current.OnReceiveShoot();
+            Destroy(this.gameObject);
+        }
+    }
 }

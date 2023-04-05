@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ConstantVelocity : MonoBehaviour
+public class ConstantVelocity : MonoBehaviour, IShootable
 {
     private Vector2 velocityDirection = Vector2.zero;
     [SerializeField]
@@ -29,5 +29,10 @@ public class ConstantVelocity : MonoBehaviour
         velocityDirection.y = Random.Range(-1f, 1f);
 
         velocityDirection.Normalize();
+    }
+
+    public void OnReceiveShoot()
+    {
+        Destroy(gameObject);
     }
 }

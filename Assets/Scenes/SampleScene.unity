@@ -834,10 +834,6 @@ PrefabInstance:
       propertyPath: screenBounds
       value: 
       objectReference: {fileID: 1525109740}
-    - target: {fileID: 6149749349816437862, guid: 94436c03f7beb2a4fb9e9a2ec8536559, type: 3}
-      propertyPath: shootCooldown
-      value: 0.4
-      objectReference: {fileID: 0}
     - target: {fileID: 6149749349816437863, guid: 94436c03f7beb2a4fb9e9a2ec8536559, type: 3}
       propertyPath: m_RootOrder
       value: 3

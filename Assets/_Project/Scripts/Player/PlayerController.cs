@@ -43,12 +43,14 @@ public class PlayerController : MonoBehaviour
     {
         shootTime += Time.deltaTime;
         
-        if (!isShooting)
+        if (!isShooting) 
             return;
+        // If a player is not shooting
 
         if (shootTime < shootCooldown)
             return;
-        
+        // If the shooting cooldown is surpassed
+
         PerformShootAction();
     }
 
