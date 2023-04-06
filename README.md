@@ -1,3 +1,8 @@
+### Controls:
+W / Up arrow :  Accelerate.
+A-D / Left - Right Arrow : Rotate.
+Left Click / Space : Shoot.
+
 # Asteroids
 Asteroids game implementation for technical interview in Loog Guitars
 
@@ -29,3 +34,10 @@ Another thing I did that is worth noticing is that I deactivated some of the col
 
 
 Those are the most interesting things I did on this project, most of the other things I did where some basic setup and things like detecting things on OnTriggerEnter2D, etc.  
+
+
+Libraries Used:
+- Unity's new Input System
+- DoTween
+- Universal RP
+- TextMeshPro
