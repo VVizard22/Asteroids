@@ -172,6 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputDataHolderSO: {fileID: 11400000, guid: c2f9b70a6113269428956b0e6a1e4f24, type: 2}
+  playerPosVariable: {fileID: 11400000, guid: 79d13fe1a4a34bb4c8ed1c6ccd14634d, type: 2}
   moveForceMultiplier: 5
   bulletPrefab: {fileID: 1947009791417966321, guid: e89029fca3c95ec47a34c01ad5723da1, type: 3}
   bulletPointTransform: {fileID: 4983620023852538419}

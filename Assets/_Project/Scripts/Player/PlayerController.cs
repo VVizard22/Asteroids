@@ -4,16 +4,28 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Dependencies")]
     [SerializeField]
     private InputDataHolderSO inputDataHolderSO;
     [SerializeField]
+    private Vector2Variable playerPosVariable;
+    
+    [Space]
+    [Header("Movement Fields:")]
+    [SerializeField]
     private float moveForceMultiplier = 5f;
+
+    [Space]
+    [Header("Bullet Fields:")]
     [SerializeField]
     private Transform bulletPrefab;
     [SerializeField]
     private Transform bulletPointTransform;
     [SerializeField]
+    [Tooltip("Time (in seconds) to wait between bullets")]
     private float shootCooldown = .2f;
+
+
     private float shootTime;
     private bool isShooting;
     private new Rigidbody2D rigidbody2D;
@@ -72,5 +84,7 @@ public class PlayerController : MonoBehaviour
         {
             rigidbody2D.AddForce(transform.up * moveForceMultiplier);
         }
+
+        playerPosVariable.SetValue(transform.position);
     }
 }

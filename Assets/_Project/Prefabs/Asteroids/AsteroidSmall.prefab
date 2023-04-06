@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 4519010603473618960}
   - component: {fileID: 4519010603473618961}
   - component: {fileID: 4519010603473618973}
-  - component: {fileID: 7727427091297155332}
+  - component: {fileID: 1726569919453232638}
   m_Layer: 7
   m_Name: AsteroidSmall
   m_TagString: Untagged
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce6fa408ef291624d906a8bb129d1d00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocityMultiplier: 1
+  velocityMultiplier: 1.5
 --- !u!114 &4519010603473618973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abd3f6378c7e2b94aa8ed5eb4cebb20b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7727427091297155332
+--- !u!114 &1726569919453232638
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,6 +202,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4519010603473618966}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cbb51a4db560164290d57719604a64f, type: 3}
+  m_Script: {fileID: 11500000, guid: dfd34fa79b58b1a4e90d57f84b342175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  asteroidScoreValue: 20

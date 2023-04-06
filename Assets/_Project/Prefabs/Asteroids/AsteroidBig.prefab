@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1233475687746439511}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1465752863503777252}
@@ -96,9 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7711a09d0eba6c747bbb1382fb59070a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroidSmallPrefab: {fileID: 4519010603473618962, guid: 5b86270eb950d7e42a5aefb14355b2a4, type: 3}
-  minAsteroidSpawn: 2
-  maxAsteroidSpawn: 5
+  asteroidScoreValue: 10
+  minAsteroidSpawn: 1
+  maxAsteroidSpawn: 3
 --- !u!114 &4339926028599822719
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DamagePlayer : MonoBehaviour, IDamageable
 {
-    public event EventHandler OnPlayerDie;
+    public static event EventHandler OnPlayerDie;
 
     [SerializeField]
     private int playerLivesAmount = 1;
