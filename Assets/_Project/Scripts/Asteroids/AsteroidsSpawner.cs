@@ -23,14 +23,14 @@ public class AsteroidsSpawner : MonoBehaviour
     [Space]
     [Header("Script settings: ")]
     [SerializeField]
-    private int maxSimultaneousAsteroidAmount = 7;
+    private int maxSimultaneousBigAsteroidAmount = 7;
     [SerializeField]
     private float minDistanceToPlayer = 1.5f;
     [SerializeField]
     private float maxSpawnTimer = 5f;
     private float spawnTimer;
 
-    private int currentSimultaneousAsteroidAmount;
+    private int currentSimultaneousBigAsteroidAmount;
     private float cameraHeight;
     private float cameraWidth;
 
@@ -57,7 +57,7 @@ public class AsteroidsSpawner : MonoBehaviour
             asteroidBig.gameObject.SetActive(false);
         }, asteroidBig => {
             Destroy(asteroidBig.gameObject);
-        }, false, maxSimultaneousAsteroidAmount, maxSimultaneousAsteroidAmount);
+        }, false, maxSimultaneousBigAsteroidAmount, maxSimultaneousBigAsteroidAmount);
 
         asteroidSmallPool = new ObjectPool<AsteroidSmall>(() => {
             return Instantiate(smallAsteroidPrefab);
@@ -70,14 +70,14 @@ public class AsteroidsSpawner : MonoBehaviour
         }, false, 10, 20);
 
         #endregion
-        for (int i = 0; i < maxSimultaneousAsteroidAmount; i++)
+        for (int i = 0; i < maxSimultaneousBigAsteroidAmount; i++)
             SpawnNewBigAsteroid();
     }
 
 
     private void Update()
     {
-        if (currentSimultaneousAsteroidAmount >= maxSimultaneousAsteroidAmount)
+        if (currentSimultaneousBigAsteroidAmount >= maxSimultaneousBigAsteroidAmount)
             return;
 
         spawnTimer += Time.deltaTime;
@@ -93,10 +93,10 @@ public class AsteroidsSpawner : MonoBehaviour
 
     private void SpawnNewBigAsteroid()
     {
-        if (currentSimultaneousAsteroidAmount >= maxSimultaneousAsteroidAmount)
+        if (currentSimultaneousBigAsteroidAmount >= maxSimultaneousBigAsteroidAmount)
             return;
 
-        currentSimultaneousAsteroidAmount++;
+        currentSimultaneousBigAsteroidAmount++;
 
         AsteroidBig asteroidBig = asteroidBigPool.Get();
         asteroidBig.SetKillAction(KillBigAsteroid);
@@ -110,7 +110,7 @@ public class AsteroidsSpawner : MonoBehaviour
 
     private void KillBigAsteroid(Asteroid asteroid)
     {
-        currentSimultaneousAsteroidAmount--;
+        currentSimultaneousBigAsteroidAmount--;
         for (int i = 0; i < asteroid.GetAmountToDivide(); i++)
         {
             SpawnSmallAsteroid(asteroid);
