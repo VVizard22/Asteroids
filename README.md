@@ -1,3 +1,8 @@
+### Controls:
+W / Up arrow :  Accelerate.
+A-D / Left - Right Arrow : Rotate.
+Left Click / Space : Shoot.
+
 # Asteroids
 Asteroids game implementation for technical interview in Loog Guitars
 
