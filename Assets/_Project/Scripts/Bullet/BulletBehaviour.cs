@@ -34,9 +34,9 @@ public class BulletBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<IShootable>(out IShootable current))
+        if (collision.TryGetComponent<IDamageable>(out IDamageable current))
         {
-            current.OnReceiveShoot();
+            current.OnReceiveDamage();
             Destroy(this.gameObject);
         }
     }

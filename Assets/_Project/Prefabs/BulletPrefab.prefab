@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 8075899254061697636}
   - component: {fileID: 8568586957061348061}
   - component: {fileID: 6128534191103626164}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IShootable
+public interface IDamageable
 {
-    public void OnReceiveShoot();
+    public void OnReceiveDamage();
 }
